@@ -1,0 +1,26 @@
+
+name: push to builder
+
+on:
+  push:
+    branches:
+      - 'master'
+  create:
+    branches:
+      - 'master'
+  delete:
+    branches:
+      - 'master'
+
+jobs:
+  push-master:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - uses: phlummox/git-force-push-action@v0.1
+        with:
+          source_branch: master
+          target_repo_url: 'git@github.com:phlummoxpusher/docker-heroku-cli.git'
+          target_branch: pusher_branch
+          ssh_private_key: ${{ secrets.PUSHER_SSH_KEY }}
+
