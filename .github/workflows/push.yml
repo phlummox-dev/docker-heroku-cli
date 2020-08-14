@@ -26,6 +26,8 @@ jobs:
 
       - name: trigger travis
         run: |
+          GITHUB_USER=phlummoxpusher
+          GITHUB_REPO=docker-heroku-cli
           body='{
             "request": {
             "branch":"master"
@@ -36,5 +38,5 @@ jobs:
             -H "Travis-API-Version: 3" \
             -H "Authorization: token ${{ secrets.TRAVIS_TOKEN }}" \
             -d "$body" \
-             https://api.travis-ci.com/repo/phlummox-dev%2Fdocker-heroku-cli/requests
+             "https://api.travis-ci.com/repo/${GITHUB_USER}%2F${GITHUB_REPO}/requests"
 
