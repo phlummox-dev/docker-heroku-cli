@@ -38,5 +38,5 @@ which made this one possible. Or much simpler, anyway.
 
 ## docker hub link
 
-<https://hub.docker.com/r/phlummoxdev/heroku-cli>
+<https://hub.docker.com/r/phlummox/heroku-cli>
 
