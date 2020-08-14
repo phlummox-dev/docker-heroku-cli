@@ -36,6 +36,5 @@ jobs:
             -H "Travis-API-Version: 3" \
             -H "Authorization: token ${{ secrets.TRAVIS_TOKEN }}" \
             -d "$body" \
-             https://api.travis-ci.com/repo/travis-ci%2Ftravis-core/requests
-
+             https://api.travis-ci.com/repo/phlummox-dev%2Fdocker-heroku-cli/requests
 
