@@ -31,6 +31,12 @@ alias heroku="docker run --rm -ti --volumes-from heroku-config \
   -v $PWD:/opt/work --workdir /opt/work phlummox/heroku-cli:0.1 heroku"
 ```
 
+## status
+
+Experimental - doesn't seem to correctly store whatever authentication heroku uses.
+Happy to patch if someone spots why. But frankly it's *still* more convenient
+than installing their app.
+
 ## credits
 
 Many thanks to @mhart for his [alpine-node](https://github.com/mhart/alpine-node) image,
